@@ -1,0 +1,42 @@
+@charset "UTF-8";
+@import "public.scss";
+/**
+ * 进度条
+ */
+.ui-progress {
+  overflow: hidden;
+  width: 100%;
+  height: px2rem(6px);
+  font-size: 0;
+  background-color: #e2e2e2;
+  border-radius: px2rem(10px);
+  box-sizing: border-box;
+  span {
+    display: block;
+    width: 0;
+    background: $myGreen;
+    height: 100%;
+    border-radius: px2rem(10px);
+    font-size: 0;
+  }
+}
+
+.ui-progress-label {
+  display: flex;
+  justify-content: space-between;
+  margin-top: px2rem(12px);
+  li > strong {
+    font-weight: normal;
+    font-size: 1.4em;
+  }
+}
+
+.ui-progress-label-muted {
+  @extend .ui-progress-label;
+  color: $font3;
+}
+
+.ui-progress-label-success {
+  @extend .ui-progress-label;
+  color: $myGreen;
+}

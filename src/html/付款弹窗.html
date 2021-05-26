@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="utf-8">
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta content="yes" name="apple-touch-fullscreen">
+    <meta content="telephone=no,email=no" name="format-detection">
+    <script src="http://g.tbcdn.cn/mtb/lib-flexible/0.3.4/??flexible_css.js,flexible.js"></script>
+    <link rel="apple-touch-icon" href="favicon.png">
+    <link rel="Shortcut Icon" href="favicon.png" type="image/x-icon">
+    <link media="all" href="../css/layout.css" rel="stylesheet">
+    <link media="all" href="../css/main.css" rel="stylesheet">
+    <title>付款弹窗</title>
+</head>
+<body>
+    <header class="ui-header ui-header-stable">
+        <i class="ui-icon-return" onclick="history.back()"></i>
+        <h1>确认订单</h1>
+    </header>
+
+    <footer class="ui-footer ui-footer-stable horizontal-padding30">
+        <div class="ui-space-between">
+            <p>共计<span>2</span>件商品 合计：<span class="hump-danger">¥ <strong>500</strong></span></p>
+            <button class="ui-btn ui-btn-danger">提交订单</button>
+        </div>
+    </footer>
+    <div class="ui-container">
+        <div class="ui-form">
+            <div class="ui-form-item ui-form-item-show ui-form-item-link">
+                <div class="simple-address">
+                    <p><i class="ui-icon-person2"></i><span>收件人：</span><span>刘某某  </span><span>13854334434</span></p>
+                    <p><i class="ui-icon-add"></i><span>收货地址：</span><span>广西省 某某市 某某县 某某村 某某某某某</span></p>
+                </div>
+            </div>
+        </div>
+        <div class="ui-form" style="margin-top: .26rem;">
+            <form>
+                <div class="ui-form-item ui-form-item-show ui-border-b form-head">
+                    <div class="ui-space-between">
+                        <p>被帮扶地区：<span>广西某县某村</span></p>
+                        <p>被帮扶困户：<span>老王</span></p>
+                    </div>
+                </div>
+                <div class="ui-form-item ui-form-item-show ui-border-b vertical-padding10">
+                    <div class="ui-flex-start">
+                        <div class="image-wrap type2">
+                            <img src="../images/project_1.png">
+                        </div>
+                        <div class="summary">
+                            <p>广西邮寄蔬菜项目</p>
+                            <p class="smaller">[春节喜庆大礼包500g]</p>
+                            <p><span class="hump-danger">¥ <strong>50</strong></span></p>
+                        </div>
+                    </div>
+                    <p class="times">×2</p>
+                </div>
+                <div class="ui-form-item ui-form-item-show ui-border-b">
+                    <div class="ui-space-between flex-adapter">
+                        <label>购买数量</label>
+                        <div class="quantity-box">
+                            <a class="decrement" href="javascript:void(0)">&ndash;</a>
+                            <input class="itxt" value="0">
+                            <a class="increment" href="javascript:void(0)">+</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="ui-form-item ui-form-item-show ui-form-item-link ui-border-b" style="padding-right: .82rem;">
+                    <div class="ui-space-between flex-adapter">
+                        <label>配送方式</label>
+                        <p>快递 免邮</p>
+                    </div>
+                </div>
+                <div class="ui-form-item ui-form-item-show">
+                    <label>买家留言</label>
+                    <input type="text" placeholder="选填，如有特别要求请输入留言">
+                </div>
+            </form>
+        </div>
+        <div class="ui-form" style="margin-top: .26rem;">
+            <div class="ui-form-item ui-form-item-show">
+                <div class="ui-space-between flex-adapter">
+                    <p>对附近的人可见</p>
+                    <label class="ui-switch">
+                        <input type="checkbox" checked>
+                    </label>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="ui-backdrop"></div>
+    <div class="ui-dialog-pay">
+        <div class="ui-dialog-pay-head ui-border-b">
+            <span class="close">×</span>
+            <h1>付款详情</h1>
+        </div>
+        <div class="ui-dialog-pay-content ui-border-b">
+            <div class="ui-form ui-border-b">
+                <div class="ui-form-item ui-form-item-show2 ui-form-item-link right-padding30">
+                    <div class="ui-flex-start ui-border-b">
+                        <p>订单信息<span class="left-padding20">20171106109092</span></p>
+                    </div>
+                </div>
+                <div class="ui-form-item ui-form-item-show2">
+                    <div class="ui-space-between">
+                        <p>实付总价(含运费)</p>
+                        <p><span class="hump-danger">¥<strong>100</strong></span></p>
+                    </div>
+                </div>
+            </div>
+            <div class="ui-form top-margin20 ui-border-t">
+                <div class="ui-form-item ui-form-item-show2">
+                    <div class="ui-space-between ui-border-b">
+                        <p><i class="ui-icon-alipay"></i><span class="pay-channel">支付宝</span></p>
+                        <p class="ui-form-item-checkbox">
+                            <label class="ui-radio-r">
+                                <input type="checkbox" checked>
+                            </label>
+                        </p>
+                    </div>
+                </div>
+                <div class="ui-form-item ui-form-item-show2">
+                    <div class="ui-space-between ui-border-b">
+                        <p><i class="ui-icon-wechat"></i><span class="pay-channel">微信</span></p>
+                        <p class="ui-form-item-checkbox">
+                            <label class="ui-radio-r">
+                                <input type="checkbox">
+                            </label>
+                        </p>
+                    </div>
+                </div>
+                <div class="ui-form-item ui-form-item-show2">
+                    <div class="ui-space-between">
+                        <p>
+                            <i class="ui-icon-union">
+                                <span class="path1"></span>
+                                <span class="path2"></span>
+                                <span class="path3"></span>
+                                <span class="path4"></span>
+                                <span class="path5"></span>
+                                <span class="path6"></span>
+                                <span class="path7"></span>
+                            </i>
+                            <span class="pay-channel">银联支付</span>
+                        </p>
+                        <p class="ui-form-item-checkbox">
+                            <label class="ui-radio-r">
+                                <input type="checkbox">
+                            </label>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="ui-dialog-pay-foot padding30">
+            <button class="ui-btn-lg ui-btn-danger">支付</button>
+        </div>
+    </div>
+</body>
+</html>

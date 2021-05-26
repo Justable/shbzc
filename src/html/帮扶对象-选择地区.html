@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="utf-8">
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta content="yes" name="apple-touch-fullscreen">
+    <meta content="telephone=no,email=no" name="format-detection">
+    <script src="http://g.tbcdn.cn/mtb/lib-flexible/0.3.4/??flexible_css.js,flexible.js"></script>
+    <link rel="apple-touch-icon" href="favicon.png">
+    <link rel="Shortcut Icon" href="favicon.png" type="image/x-icon">
+    <link media="all" href="../css/layout.css" rel="stylesheet">
+    <link media="all" href="../css/slider.css" rel="stylesheet">
+    <link media="all" href="../css/mobileSelect.css" rel="stylesheet">
+    <link media="all" href="../css/main.css" rel="stylesheet">
+    <title>帮扶对象-选择地区</title>
+</head>
+<body>
+<header class="ui-header ui-header-stable ui-header-gray ui-border-b">
+    <i class="ui-icon-return" onclick="history.back()"></i>
+    <h1>帮扶对象</h1>
+    <i class="ui-icon-more"></i>
+</header>
+
+<footer class="ui-footer ui-footer-stable">
+    <ul class="ui-tiled">
+        <li><i class="ui-icon-my"></i>
+            <div>帮扶项目</div>
+        </li>
+        <li class="active"><i class="ui-icon-tab"></i>
+            <div>帮扶对象</div>
+        </li>
+        <li><i class="ui-icon-hands"></i>
+            <div>帮扶结对</div>
+        </li>
+        <li><i class="ui-icon-person"></i>
+            <div>我</div>
+        </li>
+    </ul>
+</footer>
+
+<div class="ui-container">
+    <div class="ui-slider">
+        <ul class="ui-slider-content" style="width: 300%">
+            <li><span style="background-image:url(../images/banner1.png)"></span></li>
+            <li><span style="background-image:url(../images/banner3.png)"></span></li>
+            <li><span style="background-image:url(../images/banner1.png)"></span></li>
+        </ul>
+    </div>
+    <div class="ui-container-select">
+        <label>扶贫地区：</label>
+        <p id="demo">请选择</p>
+    </div>
+    <div class="ui-container-gallery">
+        <div class="gallery-content">
+            <div class="gallery-item">
+                <img src="../images/pic180_1.png">
+            </div>
+            <div class="gallery-item">
+                <img src="../images/pic180_2.png">
+            </div>
+            <div class="gallery-item">
+                <img src="../images/pic180_3.png">
+            </div>
+            <div class="gallery-item">
+                <img src="../images/pic180_4.png">
+            </div>
+            <div class="gallery-item">
+                <img src="../images/pic180_5.png">
+            </div>
+            <div class="gallery-item">
+                <img src="../images/pic180_6.png">
+            </div>
+            <div class="gallery-item">
+                <img src="../images/pic180_7.png">
+            </div>
+            <div class="gallery-item">
+                <img src="../images/pic180_8.png">
+            </div>
+            <div class="gallery-item">
+                <img src="../images/pic180_9.png">
+            </div>
+            <div class="gallery-item">
+                <img src="../images/pic180_10.png">
+            </div>
+            <div class="gallery-item">
+                <img src="../images/pic180_11.png">
+            </div>
+            <div class="gallery-item">
+                <img src="../images/pic180_12.png">
+            </div>
+        </div>
+        <div class="gallery-footer ui-center">
+            <button class="ui-btn ui-btn-success">换一组</button>
+        </div>
+    </div>
+</div>
+<script src="../js/zepto.min.js"></script>
+<script src="../js/scroll.js"></script>
+<script src="../js/mobileSelect.js"></script>
+<script>
+    (function () {
+        var slider = new fz.Scroll('.ui-slider', {
+            role: 'slider',
+            indicator: true,
+            autoplay: true,
+            interval: 3000
+        });
+
+        slider.on('beforeScrollStart', function (from, to) {
+            //console.log(from, to);
+        });
+
+        slider.on('scrollEnd', function (curPage) {
+            //console.log(curPage);
+        });
+
+        // 联动插件使用参考 https://github.com/onlyhom/mobileSelect.js
+        var UplinkData =
+            [
+                {id:'1',value:'兰博基尼'},
+                {
+                    id:'2',
+                    value:'劳斯莱斯',
+                    childs:[
+                        {
+                            id:'1',
+                            value:'曜影'
+                        },
+                        {
+                            id:'2',
+                            value:'幻影',
+                            childs:[
+                                {
+                                    id:'1',
+                                    value:'标准版'
+                                },
+                                {
+                                    id:'2',
+                                    value:'加长版'
+                                },
+                                {
+                                    id:'3',
+                                    value:'巅峰之旅'
+                                },
+                                {
+                                    id:'4',
+                                    value:'流光熠世'
+                                },
+                                {
+                                    id:'5',
+                                    value:'都会典藏版'
+                                }
+                            ]
+                        },
+                        {
+                            id:'3',
+                            value:'古思特',
+                            childs:[
+                                {
+                                    id:'1',
+                                    value:'加长版'
+                                },
+                                {
+                                    id:'2',
+                                    value:'永恒之爱'
+                                },
+                                {
+                                    id:'3',
+                                    value:'英骥'
+                                },
+                                {
+                                    id:'4',
+                                    value:'阿尔卑斯典藏版'
+                                }
+                            ]
+                        },
+                        {
+                            id:'4',
+                            value:'魅影',
+                            childs:[
+                                {
+                                    id:'1',
+                                    value:'标准版'
+                                },
+                                {
+                                    id:'2',
+                                    value:'Black Badge'
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    id:'3',
+                    value:'宾利',
+                    childs:[
+                        {
+                            id:'1',
+                            value:'慕尚',
+                            childs:[
+                                {
+                                    id:'1',
+                                    value:'标准版'
+                                },
+                                {
+                                    id:'2',
+                                    value:'极致版'
+                                }
+                            ]
+                        },
+                        {
+                            id:'2',
+                            value:'欧陆',
+                            childs:[
+                                {
+                                    id:'1',
+                                    value:'尊贵版'
+                                },
+                                {
+                                    id:'2',
+                                    value:'敞篷标准版'
+                                },
+                                {
+                                    id:'3',
+                                    value:'敞篷尊贵版'
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    id:'4',
+                    value:'法拉利',
+                    childs:[
+                        {
+                            id:'1',
+                            value:'LaFerrari'
+                        },
+                        {
+                            id:'2',
+                            value:'法拉利488'
+                        },
+                        {
+                            id:'3',
+                            value:'GTC4Lusso'
+                        }
+                    ]
+                },
+                {
+                    id:'5',
+                    value:'玛莎拉蒂',
+                    childs:[
+                        {
+                            id:'1',
+                            value:'总裁'
+                        },
+                        {
+                            id:'2',
+                            value:'玛莎拉蒂GT'
+                        },
+                        {
+                            id:'3',
+                            value:'Levante'
+                        }
+                    ]
+                }
+            ];
+
+        var mobileSelect4 = new MobileSelect({
+            trigger: '#demo',
+            title: '',
+            wheels: [
+                {data:UplinkData}
+            ],
+            position:[1,1,0],
+            transitionEnd:function(indexArr, data){
+                console.log(data);
+            },
+            callback:function(indexArr, data){
+                console.log(data);
+            }
+        });
+
+    })();
+    $('.number-picker').mobiscroll().scroller({
+        theme: 'ios',
+        display: 'bottom',
+        lang: "zh",
+        showLabel: true,
+        onInit: function (event, inst) {
+            // Your custom event handler goes here
+        },
+        onMarkupReady: function (event, inst) {
+            // Your custom event handler goes here
+        },
+        onBeforeShow: function (event, inst) {
+            // Your custom event handler goes here
+        },
+        onPosition: function (event, inst) {
+            // Your custom event handler goes here
+        },
+        onShow: function (event, inst) {
+            // Your custom event handler goes here
+        },
+        onSet: function (event, inst) {
+            // Your custom event handler goes here
+        },
+        onItemclick: function (event, inst) {
+            // Your custom event handler goes here
+        },
+        onDestroy: function (event, inst) {
+            // Your custom event handler goes here
+        },
+        onClose: function (event, inst) {
+            // Your custom event handler goes here
+        },
+        onCancel: function (event, inst) {
+            // Your custom event handler goes here
+        },
+        onBeforeClose: function (event, inst) {
+            // Your custom event handler goes here
+        },
+        onClear: function (event, inst) {
+            // Your custom event handler goes here
+        },
+        onChange: function (event, inst) {
+            // Your custom event handler goes here
+        },
+        validate: function (data, inst) {
+            // Your custom event handler goes here
+        },
+        wheels: [
+            [{
+                label: '长(CM)',
+                data: [
+                    '1', '2', '3', '4', '5', '6', '7', '8','9','10',
+                    '11','12','13','14','15','16','17','18','19','20',
+                    '21','22','23','24','25','26','27','28','29','30',
+                    '31','32','33','34','35','36','37','38','39','40',
+                    '41','42','43','44','45','46','47','48','49','50',
+                    '51','52','53','54','55','56','57','58','59','60',
+                    '61','62','63','64','65','66','67','68','69','70',
+                    '71','72','73','74','75','76','77','78','79','80',
+                    '81','82','83','84','85','86','87','88','89','90',
+                    '91','92','93','94','95','96','97','98','99',
+                ]
+            }, {
+                label: '宽(CM)',
+                data: [
+                    '1', '2', '3', '4', '5', '6', '7', '8','9','10',
+                    '11','12','13','14','15','16','17','18','19','20',
+                    '21','22','23','24','25','26','27','28','29','30',
+                    '31','32','33','34','35','36','37','38','39','40',
+                    '41','42','43','44','45','46','47','48','49','50',
+                    '51','52','53','54','55','56','57','58','59','60',
+                    '61','62','63','64','65','66','67','68','69','70',
+                    '71','72','73','74','75','76','77','78','79','80',
+                    '81','82','83','84','85','86','87','88','89','90',
+                    '91','92','93','94','95','96','97','98','99',
+                ]
+            },{
+                label: '高(CM)',
+                data: [
+                    '1', '2', '3', '4', '5', '6', '7', '8','9','10',
+                    '11','12','13','14','15','16','17','18','19','20',
+                    '21','22','23','24','25','26','27','28','29','30',
+                    '31','32','33','34','35','36','37','38','39','40',
+                    '41','42','43','44','45','46','47','48','49','50',
+                    '51','52','53','54','55','56','57','58','59','60',
+                    '61','62','63','64','65','66','67','68','69','70',
+                    '71','72','73','74','75','76','77','78','79','80',
+                    '81','82','83','84','85','86','87','88','89','90',
+                    '91','92','93','94','95','96','97','98','99',
+                ]
+            }]
+        ]
+    });
+</script>
+
+</body>
+</html>

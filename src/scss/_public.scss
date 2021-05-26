@@ -1,0 +1,92 @@
+@charset "UTF-8";
+
+$myGreen: #5cb975;
+$pureWhite: #fff;
+$backgroundGray: #f8f8f8;
+$splitLine: #eee;
+$pointRed: #f96268;
+$font1: #222;
+$font2: #666;
+$font3: #999;
+$font4: #bbb;
+$font5: #959595;
+$border1: #e0e0e0;
+$border2: #f4f4f4;
+
+/**
+ * px转换rem
+ */
+@function px2rem($px, $base-font-size: 75px) {
+  @if (unitless($px)) {
+    @warn "Assuming #{$px} to be in pixels, attempting to convert it into pixels for you";
+    @return px2rem($px + 0px); // That may fail.
+  } @else if (unit($px) == rem) {
+    @return $px;
+  }
+  @return ($px / $base-font-size) * 1rem;
+}
+
+/**
+ * quantity-box
+ */
+@mixin quantity-box($base-size: 100px) {
+  position: relative;
+  overflow: hidden;
+  height: ($base-size / 100px) * px2rem(62px);
+  width: ($base-size / 100px) * px2rem(306px);
+  .decrement,.increment {
+    float: left;
+    border: 1px solid $border1;
+    border-right: 0;
+    height: ($base-size / 100px) * px2rem(60px);
+    line-height: ($base-size / 100px) * px2rem(50px);
+    padding: 1px 0;
+    width: ($base-size / 100px) * px2rem(60px);
+    font-size: ($base-size / 100px) * px2rem(60px);
+    text-align: center;
+    font-weight: lighter;
+    color: $font3;
+    margin: 0;
+    background: $border2;
+    text-decoration: none;
+  }
+  .decrement.disabled,
+  .increment.disabled {
+    cursor: default;
+    color: #e9e9e9;
+  }
+  .itxt {
+    position: absolute;
+    left: ($base-size / 100px) * px2rem(60px);
+    border: 1px solid $border1;
+    width: ($base-size / 100px) * px2rem(186px);
+    height: ($base-size / 100px) * px2rem(60px);
+    line-height: ($base-size / 100px) * px2rem(60px);
+    text-align: center;
+    padding: 1px;
+    margin: 0;
+    font-size: ($base-size / 100px) * px2rem(40px);
+    color: $font2;
+    -webkit-appearance: none;
+  }
+  .increment {
+    float: right;
+    border: 1px solid $border1;
+    border-left: 0;
+  }
+}
+
+/**
+ * 描述性的文本适配
+ */
+@mixin font-dpr($font-size){
+  font-size: $font-size / 2;
+
+  [data-dpr="2"] & {
+    font-size: $font-size;
+  }
+
+  [data-dpr="3"] & {
+    font-size: $font-size * 3 / 2;
+  }
+}

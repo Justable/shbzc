@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="utf-8">
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta content="yes" name="apple-touch-fullscreen">
+    <meta content="telephone=no,email=no" name="format-detection">
+    <script src="http://g.tbcdn.cn/mtb/lib-flexible/0.3.4/??flexible_css.js,flexible.js"></script>
+    <link rel="apple-touch-icon" href="favicon.png">
+    <link rel="Shortcut Icon" href="favicon.png" type="image/x-icon">
+    <link media="all" href="../css/layout.css" rel="stylesheet">
+    <link media="all" href="../css/slider.css" rel="stylesheet">
+    <link media="all" href="../css/main.css" rel="stylesheet">
+    <title>帮扶对象</title>
+</head>
+<body>
+    <header class="ui-header ui-header-stable ui-header-gray ui-border-b">
+        <i class="ui-icon-return" onclick="history.back()"></i>
+        <h1>帮扶对象</h1>
+        <i class="ui-icon-more"></i>
+    </header>
+
+    <footer class="ui-footer ui-footer-stable">
+        <ul class="ui-tiled">
+            <li><i class="ui-icon-my"></i><div>帮扶项目</div></li>
+            <li class="active"><i class="ui-icon-tab"></i><div>帮扶对象</div></li>
+            <li><i class="ui-icon-hands"></i><div>帮扶结对</div></li>
+            <li><i class="ui-icon-person"></i><div>我</div></li>
+        </ul>
+    </footer>
+
+    <div class="ui-container">
+        <div class="ui-slider">
+            <ul class="ui-slider-content" style="width: 300%">
+                <li><span style="background-image:url(../images/banner1.png)"></span></li>
+                <li><span style="background-image:url(../images/banner3.png)"></span></li>
+                <li><span style="background-image:url(../images/banner1.png)"></span></li>
+            </ul>
+        </div>
+        <div class="ui-container-select">
+            <label>扶贫地区：</label>
+            <p>广西壮族自治区</p>
+        </div>
+        <div class="ui-container-gallery">
+            <div class="gallery-content">
+                <div class="gallery-item">
+                    <img src="../images/pic180_1.png">
+                </div>
+                <div class="gallery-item">
+                    <img src="../images/pic180_2.png">
+                </div>
+                <div class="gallery-item">
+                    <img src="../images/pic180_3.png">
+                </div>
+                <div class="gallery-item">
+                    <img src="../images/pic180_4.png">
+                </div>
+                <div class="gallery-item">
+                    <img src="../images/pic180_5.png">
+                </div>
+                <div class="gallery-item">
+                    <img src="../images/pic180_6.png">
+                </div>
+                <div class="gallery-item">
+                    <img src="../images/pic180_7.png">
+                </div>
+                <div class="gallery-item">
+                    <img src="../images/pic180_8.png">
+                </div>
+                <div class="gallery-item">
+                    <img src="../images/pic180_9.png">
+                </div>
+                <div class="gallery-item">
+                    <img src="../images/pic180_10.png">
+                </div>
+                <div class="gallery-item">
+                    <img src="../images/pic180_11.png">
+                </div>
+                <div class="gallery-item">
+                    <img src="../images/pic180_12.png">
+                </div>
+            </div>
+            <div class="gallery-footer ui-center">
+                <button class="ui-btn ui-btn-success">换一组</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="../js/zepto.min.js"></script>
+    <script src="../js/scroll.js"></script>
+    <script>
+        (function(){
+            var slider = new fz.Scroll('.ui-slider', {
+                role: 'slider',
+                indicator: true,
+                autoplay: true,
+                interval: 3000
+            });
+
+            slider.on('beforeScrollStart', function(from, to) {
+                //console.log(from, to);
+            });
+
+            slider.on('scrollEnd', function(curPage) {
+                //console.log(curPage);
+            });
+
+        })();
+    </script>
+</body>
+</html>

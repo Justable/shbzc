@@ -1,0 +1,136 @@
+@charset "UTF-8";
+@import "public.scss";
+@font-face {
+  font-family: "iconfont";
+  src: url(../font/iconfont.ttf) format("truetype"); }
+.ui-icon, [class^="ui-icon-"] {
+  font-family: "iconfont" !important;
+  font-size: px2rem(32px);
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-stroke-width: 0.2px;
+  display: inline-block;
+  color: rgba(0, 0, 0, 0.5); }
+
+.ui-icon-alipay:before {
+  content: "\e900";
+}
+.ui-icon-wechat:before {
+  content: "\e902";
+}
+.ui-icon-like:before {
+  content: "\e905";
+}
+.ui-icon-more:before {
+  content: "\e907";
+}
+.ui-icon-right:before {
+  content: "\e908";
+}
+.ui-icon-add:before {
+  content: "\e909";
+}
+.ui-icon-edit:before {
+  content: "\e90e";
+}
+.ui-icon-person2:before {
+  content: "\e90f";
+}
+.ui-icon-my:before {
+  content: "\e910";
+}
+.ui-icon-delete:before {
+  content: "\e911";
+}
+.ui-icon-tab:before {
+  content: "\e912";
+}
+.ui-icon-arrow-b:before {
+  content: "\e913";
+}
+.ui-icon-hands:before {
+  content: "\e914";
+}
+.ui-icon-person:before {
+  content: "\e916";
+}
+.ui-icon-radio2:before {
+  content: "\f601";
+}
+.ui-icon-radio1:before {
+  content: "\f610";
+}
+.ui-icon-return:before {
+  content: "\f614";
+}
+.ui-icon-close:before {
+  content: "\e901";
+}
+.ui-icon-union .path1:before {
+  content: "\e903";
+  color: rgb(255, 255, 255);
+}
+.ui-icon-union .path2:before {
+  content: "\e904";
+  margin-left: -1.0078125em;
+  color: rgb(255, 255, 255);
+}
+.ui-icon-union .path3:before {
+  content: "\e906";
+  margin-left: -1.0078125em;
+  color: rgb(3, 68, 128);
+}
+.ui-icon-union .path4:before {
+  content: "\e90a";
+  margin-left: -1.0078125em;
+  color: rgb(17, 124, 131);
+}
+.ui-icon-union .path5:before {
+  content: "\e90b";
+  margin-left: -1.0078125em;
+  color: rgb(210, 52, 49);
+}
+.ui-icon-union .path6:before {
+  content: "\e90c";
+  margin-left: -1.0078125em;
+  color: rgb(255, 255, 255);
+}
+.ui-icon-union .path7:before {
+  content: "\e90d";
+  margin-left: -1.0078125em;
+  color: rgb(255, 255, 255);
+}
+
+.ui-icon-return {
+  color: #000;
+  font-size: px2rem(56px);
+  line-height: px2rem(100px);
+}
+.ui-icon-more {
+  color: #000;
+  font-size: px2rem(46px);
+  line-height: px2rem(100px);
+}
+.ui-icon-alipay:before {
+  color: #009fe8;
+}
+.ui-icon-wechat:before {
+  color: #72bd63;
+}
+
+.ui-icon-my,
+.ui-icon-tab,
+.ui-icon-hands,
+.ui-icon-person {
+  color: inherit;
+  font-size: px2rem(50px);
+  line-height: px2rem(66px); }
+
+.ui-icon-like {
+  color: $pointRed;
+  font-size: px2rem(46px);
+}
+
+.color-pure {
+  color: $pureWhite;
+}

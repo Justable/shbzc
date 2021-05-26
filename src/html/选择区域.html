@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="utf-8">
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta content="yes" name="apple-touch-fullscreen">
+    <meta content="telephone=no,email=no" name="format-detection">
+    <script src="http://g.tbcdn.cn/mtb/lib-flexible/0.3.4/??flexible_css.js,flexible.js"></script>
+    <link rel="apple-touch-icon" href="favicon.png">
+    <link rel="Shortcut Icon" href="favicon.png" type="image/x-icon">
+    <link media="all" href="../css/layout.css" rel="stylesheet">
+    <link media="all" href="../css/mobileSelect.css" rel="stylesheet">
+    <link media="all" href="../css/main.css" rel="stylesheet">
+    <title>添加新地址</title>
+</head>
+<body>
+    <header class="ui-header ui-header-stable ui-header-gray ui-border-b">
+        <i class="ui-icon-return" onclick="history.back()"></i>
+        <h1>添加新地址</h1>
+        <button class="ui-btn ui-btn-text">保存</button>
+    </header>
+
+    <div class="ui-container">
+        <div class="ui-form">
+            <form>
+                <div class="ui-form-item ui-form-item-show3 ui-border-b">
+                    <label>收货人</label>
+                    <input type="text">
+                </div>
+                <div class="ui-form-item ui-form-item-show3 ui-border-b">
+                    <label>联系电话</label>
+                    <input type="text">
+                </div>
+                <div class="ui-form-item ui-form-item-show3 ui-form-item-link ui-border-b">
+                    <div class="ui-space-between flex-adapter">
+                        <label>收货地址</label>
+                        <p id="demo">请选择</p>
+                    </div>
+                </div>
+                <div class="ui-form-item ui-form-item-show3 ui-form-item-link ui-border-b">
+                    <div class="ui-space-between flex-adapter">
+                        <label>详细地址</label>
+                        <p>请选择</p>
+                    </div>
+                </div>
+                <div class="ui-form-item ui-form-item-show3">
+                    <label>邮政编码</label>
+                    <input type="text">
+                </div>
+            </form>
+        </div>
+        <div class="ui-form top-margin20">
+            <div class="ui-form-item ui-form-item-show">
+                <div class="ui-space-between flex-adapter">
+                    <p>设为默认地址</p>
+                    <label class="ui-switch">
+                        <input type="checkbox" checked>
+                    </label>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="../js/mobileSelect.js"></script>
+    <script>
+        (function(){
+            var areaArr=['北京','上海','杭州','深圳','香港','澳门','台湾'];
+
+            var mobileSelect1 = new MobileSelect({
+                trigger: '#demo',
+                title: '',
+                wheels: [
+                    {data: areaArr}
+                ],
+                position:[2], //初始化定位 打开时默认选中的哪个 如果不填默认为0
+                transitionEnd:function(indexArr, data){
+                    console.log(data);
+                },
+                callback:function(indexArr, data){
+                    console.log(data);
+                }
+            });
+        })();
+    </script>
+</body>
+</html>

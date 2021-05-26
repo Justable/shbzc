@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="utf-8">
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta content="yes" name="apple-touch-fullscreen">
+    <meta content="telephone=no,email=no" name="format-detection">
+    <script src="http://g.tbcdn.cn/mtb/lib-flexible/0.3.4/??flexible_css.js,flexible.js"></script>
+    <link rel="apple-touch-icon" href="favicon.png">
+    <link rel="Shortcut Icon" href="favicon.png" type="image/x-icon">
+    <link media="all" href="../css/layout.css" rel="stylesheet">
+    <link media="all" href="../css/slider.css" rel="stylesheet">
+    <link media="all" href="../css/progress.css" rel="stylesheet">
+    <link media="all" href="../css/main.css" rel="stylesheet">
+    <title>首页</title>
+</head>
+<body>
+    <header class="ui-header ui-header-stable">
+        <i class="ui-icon-return" onclick="history.back()"></i>
+        <h1>四海帮</h1>
+        <i class="ui-icon-more"></i>
+    </header>
+
+    <footer class="ui-footer ui-footer-stable">
+        <ul class="ui-tiled">
+            <li class="active"><i class="ui-icon-my"></i><div>帮扶项目</div></li>
+            <li><i class="ui-icon-tab"></i><div>帮扶对象</div></li>
+            <li><i class="ui-icon-hands"></i><div>帮扶结对</div></li>
+            <li><i class="ui-icon-person"></i><div>我</div></li>
+        </ul>
+    </footer>
+    <div class="ui-container">
+        <div class="ui-slider">
+            <ul class="ui-slider-content" style="width: 300%">
+                <li><span style="background-image:url(../images/banner1.png)"></span></li>
+                <li><span style="background-image:url(../images/banner3.png)"></span></li>
+                <li><span style="background-image:url(../images/banner1.png)"></span></li>
+            </ul>
+        </div>
+        <div class="ui-content-item">
+            <img src="../images/project_1.png" width="100%">
+            <section class="ui-progress-wrap">
+                <h1 class="title">广西有机蔬菜扶贫项目</h1>
+                <div class="ui-progress">
+                    <span style="width:50%"></span>
+                </div>
+                <ul class="ui-progress-label-success">
+                    <li>目标¥40000</li>
+                    <li>已认筹¥24000</li>
+                    <li>已购买200次</li>
+                </ul>
+            </section>
+        </div>
+        <div class="ui-content-item">
+            <img src="../images/project_2.png" width="100%">
+            <section class="ui-progress-wrap">
+                <h1 class="title">广西有机蔬菜扶贫项目</h1>
+                <div class="ui-progress">
+                    <span style="width:50%"></span>
+                </div>
+                <ul class="ui-progress-label-success">
+                    <li>目标¥40000</li>
+                    <li>已认筹¥24000</li>
+                    <li>已购买200次</li>
+                </ul>
+            </section>
+        </div>
+    </div>
+
+    <script src="../js/zepto.min.js"></script>
+    <script src="../js/scroll.js"></script>
+    <script>
+        (function(){
+            var slider = new fz.Scroll('.ui-slider', {
+                role: 'slider',
+                indicator: true,
+                autoplay: true,
+                interval: 3000
+            });
+
+            slider.on('beforeScrollStart', function(from, to) {
+                //console.log(from, to);
+            });
+
+            slider.on('scrollEnd', function(curPage) {
+                //console.log(curPage);
+            });
+
+        })();
+    </script>
+</body>
+</html>

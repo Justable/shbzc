@@ -1,0 +1,28 @@
+{
+  "name": "shbzc",
+  "version": "1.0.0",
+  "description": "四海帮众筹",
+  "main": "index.js",
+  "scripts": {
+    "scss": "node-sass -o src-amfe-old/css src-amfe-old/scss",
+    "autoprefixer": "postcss -u autoprefixer -r src-amfe-old/css/*"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Justable/shbzc.git"
+  },
+  "keywords": [
+    "h5"
+  ],
+  "author": "zhuzy",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Justable/shbzc/issues"
+  },
+  "homepage": "https://github.com/Justable/shbzc#readme",
+  "devDependencies": {
+    "autoprefixer": "^7.1.6",
+    "node-sass": "^4.5.3",
+    "postcss-cli": "^4.1.1"
+  }
+}
